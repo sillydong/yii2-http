@@ -1,0 +1,21 @@
+{
+    "name": "sillydong/yii2-http",
+    "description": "simple way to do http request",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","http","request","curl"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Chen.Zhidong",
+            "email": "njutczd@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "sillydong\\http\\": ""
+        }
+    }
+}
