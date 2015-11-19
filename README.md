@@ -28,4 +28,9 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \sillydong\http\AutoloadExample::widget(); ?>```
+\sillydong\http\Client::get($url);
+
+\sillydong\http\Client::post($url, $body, $headers);
+
+\sillydong\http\Client::multipartPost($url, $fields, $name, $fileName, $fileBody, $mimeType, $headers);
+```
