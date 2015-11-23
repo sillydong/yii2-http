@@ -3,11 +3,11 @@
 namespace sillydong\http;
 
 final class Response {
-    public $statusCode;
-    public $headers;
-    public $body;
-    public $error;
-    public $duration;
+    protected $statusCode;
+    protected $headers;
+    protected $body;
+    protected $error;
+    protected $duration;
 
     /** @var array Mapping of status codes to reason phrases */
     private static $statusTexts = array(
@@ -100,12 +100,24 @@ final class Response {
         return;
     }
 
-    public function body() {
-        return $this->body;
-    }
-
     public function ok() {
         return $this->statusCode >= 200 && $this->statusCode < 300 && $this->error === null;
+    }
+    
+    public function get_code(){
+        return $this->statusCode;
+    }
+    
+    public function get_header(){
+        return $this->headers;
+    }
+
+    public function get_body() {
+        return $this->body;
+    }
+    
+    public function get_error(){
+        return $this->error;
     }
 
     public function needRetry() {
